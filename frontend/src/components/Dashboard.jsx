@@ -49,7 +49,7 @@ export default function Dashboard() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await axios.get(`http://localhost:5000/api/mood/history/${user.uid}`)
+        const res = await axios.get(`https://moodlens-backend-63tz.onrender.com/api/mood/history/${user.uid}`)
         setEntries(res.data)
       } catch (err) {
         console.error(err)
