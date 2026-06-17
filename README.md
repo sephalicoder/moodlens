@@ -26,6 +26,7 @@
 | AI / NLP | Groq API — Llama 3.3 70B |
 | Authentication | Firebase Auth |
 | Deployment | Vercel (frontend), Render (backend) |
+| Uptime Monitoring | UptimeRobot (keeps backend warm, prevents cold-start delay) |
 
 ---
 
@@ -42,6 +43,8 @@ Express Backend (Render) ──► Groq API (mood analysis)
 
 Firebase Auth handles user identity across the frontend
 ```
+
+> **Note:** The backend is hosted on Render's free tier, which spins down after periods of inactivity. To avoid cold-start delays, [UptimeRobot](https://uptimerobot.com) pings the backend every 5 minutes to keep it warm and responsive 24/7.
 
 ---
 
